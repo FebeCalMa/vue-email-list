@@ -28,7 +28,7 @@ const app = new Vue({
       });
   },
 
-  let generatedMail = result.response;
+  let generatedMail = "response.data";
   for() {
     
   }
