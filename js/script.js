@@ -11,10 +11,19 @@ Far comparire gli indirizzi email
 solamente quando sono stati tutti generati.
 */
 
-//Mail generator
-axios
-  .get("https://flynn.boolean.careers/exercises/api/random/mail")
-  .then(function (response) {
-    const result = response.data;
-    console.log(result);
-  });
+const app = new Vue({
+  el: "#app",
+  data: {
+    mailRandom: 
+  },
+  mounted() {
+    console.log('')
+    //Mail generator
+    axios
+      .get("https://flynn.boolean.careers/exercises/api/random/mail")
+      .then(function (response) {
+        const result = response.data;
+        console.log(result);
+      });
+  }
+});
