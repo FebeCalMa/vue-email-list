@@ -27,4 +27,9 @@ const app = new Vue({
         //this.mailRandom = result.success ? result.response : -1;
       });
   },
+
+  let generatedMail = result.response;
+  for() {
+    
+  }
 });
