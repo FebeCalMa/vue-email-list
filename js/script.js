@@ -14,7 +14,7 @@ solamente quando sono stati tutti generati.
 const app = new Vue({
   el: "#app",
   data: {
-    mailRandom: -1,
+    mailRandom: 1,
   },
   mounted() {
     console.log("Mail generate", this.mailRandom);
@@ -23,7 +23,8 @@ const app = new Vue({
       .get("https://flynn.boolean.careers/exercises/api/random/mail")
       .then((response) => {
         const result = response.data;
-        console.log(this.mailRandom, result);
+        console.log(this.mailRandom, result.response);
+        //this.mailRandom = result.success ? result.response : -1;
       });
   },
 });
