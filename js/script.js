@@ -14,16 +14,16 @@ solamente quando sono stati tutti generati.
 const app = new Vue({
   el: "#app",
   data: {
-    mailRandom: 
+    mailRandom: -1,
   },
   mounted() {
-    console.log('')
+    console.log("Mail generate", this.mailRandom);
     //Mail generator
     axios
       .get("https://flynn.boolean.careers/exercises/api/random/mail")
-      .then(function (response) {
+      .then((response) => {
         const result = response.data;
-        console.log(result);
+        console.log(this.mailRandom, result);
       });
-  }
+  },
 });
